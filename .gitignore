@@ -1,0 +1,4 @@
+# Project exclude paths
+/grpc-stub/target/
+/rest-grpc-client/target/
+/rest-sample/target/

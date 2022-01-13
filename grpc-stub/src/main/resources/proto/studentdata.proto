@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.stub;
+option java_package = "com.stub.protoclass";
+option java_outer_classname = "StudentModelGRPC";
+
+service Student{
+  rpc createStudent(StudentRequest) returns (StudentResponse);
+
+  rpc getStudents(Empty) returns (StudentResponse);
+}
+
+message StudentRequest{
+  int32 id = 1;
+  string name = 2;
+  string college = 3;
+}
+
+message StudentResponse{
+  int32 id = 1;
+  string name = 2;
+  string college = 3;
+}
+
+message Empty{
+  int32 id=1;
+}
